@@ -10,5 +10,5 @@ setup(
     license='MIT',
     # packages=['ft_package'],
     packages=find_packages(),
-    zip_safe=False #The zip_safe argument defines whether the package is installed in compressed mode or regular mode.
+    zip_safe=False  # installed in compressed mode or regular mode.
 )
