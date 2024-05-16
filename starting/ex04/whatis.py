@@ -9,7 +9,10 @@ elif (not sys.argv[1].lstrip('-').isdigit()):
     print('AssertionError: argument is not an integer')
     sys.exit()
 
-if (int(sys.argv[1]) % 2 != 0):
-    print("I'm Odd.")
-else:
-    print("I'm Even.")
+try:
+    if (int(sys.argv[1]) % 2 != 0):
+        print("I'm Odd.")
+    else:
+        print("I'm Even.")
+except Exception as e:
+    print("Error Occured Check your number", e)

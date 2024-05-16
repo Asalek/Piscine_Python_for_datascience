@@ -35,6 +35,12 @@ if __name__ == "__main__":
             text_analyzer(text)
         except TypeError:
             pass
+        except KeyboardInterrupt:
+            print("\n\tSee Ya (^_^)")
+            exit()
+        except EOFError:
+            print("\n\tSee Ya (^_^)")
+            exit()
     elif (not isinstance(sys.argv[1], str)):
         print("AssertionError: argument is not a string")
     else:
