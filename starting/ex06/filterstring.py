@@ -8,7 +8,7 @@ def main():
         output:  a list of words from S that have a length greater than N.
     """
     if len(sys.argv) != 3:
-        print("Usage: python filterstring.py <string> <int>")
+        print("Usage: EXpected input : <string> <int>")
         sys.exit(1)
     text = sys.argv[1]
     try:

@@ -1,5 +1,4 @@
 def all_thing_is_obj(object: any) -> int:
-	# print(f"Type of {object} is {type(object)}")
     types = {
         str  : "String",
         tuple: "Tuple",
@@ -7,7 +6,7 @@ def all_thing_is_obj(object: any) -> int:
         set  : "Set",
         list : "List"
     }
-    o_type = type(object)
+    o_type = object.__class__
     object_type = types.get(o_type, "Type not found")#Return the value for key if key is in the dictionary, else type Not found.
     if o_type == str:
         print(f"{object} is in the kitchen : {o_type}")

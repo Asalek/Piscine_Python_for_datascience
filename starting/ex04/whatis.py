@@ -5,14 +5,13 @@ if (len(sys.argv) == 1):
 elif (len(sys.argv) > 2):
     print('AssertionError: more than one argument are provided')
     sys.exit()
-elif (not sys.argv[1].lstrip('-').isdigit()):
+try:
+    a = int(sys.argv[1], base=10)
+except:
+    a = ""
+
+if not a:
     print('AssertionError: argument is not an integer')
     sys.exit()
 
-try:
-    if (int(sys.argv[1]) % 2 != 0):
-        print("I'm Odd.")
-    else:
-        print("I'm Even.")
-except Exception as e:
-    print("Error Occured Check your number", e)
+print("I'm Odd." if a % 2 != 0 else "I'm Even.")
