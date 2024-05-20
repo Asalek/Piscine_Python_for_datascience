@@ -8,9 +8,9 @@ elif (len(sys.argv) > 2):
 try:
     a = int(sys.argv[1], base=10)
 except:
-    a = ""
+    a = None
 
-if not a:
+if a is None:
     print('AssertionError: argument is not an integer')
     sys.exit()
 

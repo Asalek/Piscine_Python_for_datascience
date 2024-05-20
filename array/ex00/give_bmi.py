@@ -13,8 +13,8 @@ def give_bmi(height: list[int | float],
     weight = np.asarray(weight)
 
     if (
-        height.dtype not in ['float64', 'int32'] or
-        weight.dtype not in ['float64', 'int32']
+        height.dtype not in ['float64', 'int64'] or
+        weight.dtype not in ['float64', 'int64']
     ):
         raise ValueError('Height and weight must only contains int or float')
     if height.shape != weight.shape:

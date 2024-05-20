@@ -41,7 +41,7 @@ def main():
     """
     data = []
     try:
-        data = ft_load('aanimal.jpeg')
+        data = ft_load('animal.jpeg')
     except Exception as e:
         print(e)
         sys.exit()

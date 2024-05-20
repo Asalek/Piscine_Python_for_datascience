@@ -1,16 +1,15 @@
-import math
 
 def NULL_not_found(object: any) -> int:
 	types = {
 		None: "Nothing",
-		math.nan: "Cheese",
+		float('nan'): "Cheese",
 		0: "Zero",
 		'': "Empty",
 		False: "Fake"
 	}
 	typee = object.__class__
 	object_type = types.get(object, "Type not Found")
-	if typee is float and math.isnan(object):
+	if typee is float and object != object:  # NaN is the only value in Python that is not equal to itself
 		print("Cheese", ':', object, typee)
 	elif typee is int and object == 0:
 		print("Zero", ':', object, typee)
