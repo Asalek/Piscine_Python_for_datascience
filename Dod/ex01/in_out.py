@@ -12,6 +12,8 @@ def outer(x: int | float, function) -> object:
     '''Apply function on the given number'''
     # outer.oldX = getattr(outer, "oldX", x)
     def inner() -> float:
+        # not in PY2, tell's innerFunc to use baseFunc X
+        # don't create a new x use old One
         nonlocal x
         x = function(x)
         return x
