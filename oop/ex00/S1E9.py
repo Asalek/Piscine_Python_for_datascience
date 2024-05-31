@@ -15,7 +15,7 @@ class Character(ABC):
     @abstractmethod
     def die():
         '''Character die'''
-        Ellipsis  # ...
+        Ellipsis  # ... or pass
 
 
 class Stark(Character):
